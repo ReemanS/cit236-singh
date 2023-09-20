@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* --text: #171e15;
+--background: #ffffff;
+--primary: #39513f;
+--secondary: #dbe6e3;
+--accent: #668f85; */
+
+* {
+  margin: 0%;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  color: #171e15;
+}
+
+.first-wrapper {
+  background-color: #39513f;
+}
+
+header {
+  height: 20em;
+  padding: 1em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  text-align: center;
+  background-color: #39513f;
+  background-image: url("assets/cat.png");
+  background-size: 24em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  padding-top: 0.25em;
+  animation: drop 1.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 img {
+  margin-right: 0.25em;
+  animation: spin 3s linear 1s infinite;
+}
+
+#about {
+  padding: 1em;
+  text-align: center;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 4em;
+  border-radius: 30px 30px 0 0;
+  background-color: white;
+}
+
+h2 {
+  font-size: 1.75em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  animation: appear 1.25s ease-in-out;
+}
+
+#about h2::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 4em;
+  border-bottom: 0.125em solid #668f85;
+}
+
+p,
+a {
+  font-size: 1.5em;
+  font-weight: 500;
+  animation-delay: 1s;
+  animation: appear 1.25s ease-out 0.5s both;
+}
+
+.second-wrapper {
+  background-color: white;
+}
+
+#pictures {
+  padding: 1em;
+  text-align: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-radius: 30px 30px 0 0;
+  background-color: #dbe6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pictures h2::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 0.15em;
+  width: 7em;
+  border-bottom: 0.125em solid #668f85;
+}
+
+#pictures p {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.image-container {
+  display: grid;
+  align-items: center;
+  gap: 2em 2em;
+  grid-template-columns: 1fr;
+}
+
+.images {
+  width: 20em;
+  height: auto;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+#spider {
+  width: 15em;
+  height: auto;
+  border-radius: 16px;
+}
+
+footer {
+  max-width: 100wv;
+  text-align: center;
+  background-color: #dbe6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-text {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+footer .spinning-cat {
+  animation: spin 3s linear 1s infinite;
+  padding-bottom: 0.5em;
+}
+
+footer p {
+  padding-bottom: 0.75em;
+}
+
+footer a {
+  color: #39513f;
+}
+
+footer a:hover {
+  color: #668f85;
+  transition: 0.5s;
+}
+
+footer img {
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-150%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  #about {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+
+  .images {
+    width: 45em;
+  }
+
+  #spider {
+    width: 20em;
+  }
+
+  header h1 {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .images {
+    width: 30em;
+  }
+}
